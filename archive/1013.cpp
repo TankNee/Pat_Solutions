@@ -1,10 +1,14 @@
+//
+// Created by tanknee on 2021/1/25.
+//
+
 #include <iostream>
 
 using namespace std;
 int highways[1001][1001], n;
 bool visited[1001];
 
-int dfs(int city_id) {
+void dfs(int city_id) {
     visited[city_id] = true;
     for (int i = 1; i <= n; ++i) {
         if (!visited[i] && highways[city_id][i]) {

@@ -7,7 +7,7 @@ int n;
 void dfs(int node) {
     visit[node] = true;
     for(int i = 1; i <= n; i++) {
-        if(visit[i] == false && v[node][i] == 1)
+        if(!visit[i] && v[node][i] == 1)
             dfs(i);
     }
 }
@@ -24,7 +24,7 @@ int main() {
         int cnt = 0;
         visit[a] = true;
         for(int j = 1; j <= n; j++) {
-            if(visit[j] == false) {
+            if(!visit[j]) {
                 dfs(j);
                 cnt++;
             }
