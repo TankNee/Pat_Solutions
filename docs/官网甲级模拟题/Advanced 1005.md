@@ -76,7 +76,7 @@ one five
 
 ## 代码实现
 
-```c++
+```cpp
 #include <iostream>
 #include <vector>
 

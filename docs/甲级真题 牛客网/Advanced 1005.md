@@ -48,7 +48,7 @@ For each test case, print in one line the largest population number and the leve
 
 ## 代码与实现
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/27.
 //

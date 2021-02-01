@@ -59,7 +59,7 @@ SC3021234 CS301133
 
 对于时间的比较我们可以先考虑给出的时间格式，八位固定字符串，那么我们可以直接用`substr`方法来读取时分秒的值，然后用运算符比较就行，不需要再转换成整形值。
 
-```c++
+```cpp
 /**
  * 判断时间1是否大于时间2，如果大于则返回true，小于返回false，不存在相同的情况
  * @param time_1
@@ -86,7 +86,7 @@ bool compare_time(const string& time_1, const string& time_2) {
 
 ## 代码实现
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/23.
 //

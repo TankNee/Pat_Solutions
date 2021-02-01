@@ -51,7 +51,7 @@ For each of the *K* cities, output in a line the number of highways need to be r
 
 下面给一个dfs的模板，方便以后参考：
 
-```c++
+```cpp
 int highways[1001][1001], n;
 bool visited[1001];
 
@@ -71,7 +71,7 @@ void dfs(int city_id) {
 
 ## 代码与实现[^1]
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/25.
 //

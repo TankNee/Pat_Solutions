@@ -43,7 +43,7 @@ For each test case, output in one line the largest sum, together with the first 
 
 ## 代码实现
 
-```c++
+```cpp
 #include <iostream>
 #include <vector>
 

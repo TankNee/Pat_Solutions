@@ -32,7 +32,7 @@ For each test case, print the total time on a single line.
 
 ## 代码与实现
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/24.
 //

@@ -68,7 +68,7 @@ N/A
 
 由上述信息我们这么设计：
 
-```c++
+```cpp
 struct student {
     int id;
     int score[4];
@@ -88,7 +88,7 @@ struct student {
 
 ## 代码与实现[^1]
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/25.
 //

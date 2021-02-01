@@ -75,7 +75,7 @@ The sample case represents a tree with only 2 nodes, where `01` is the root and 
 
 ### 处理输入
 
-```c++
+```cpp
 // 全局变量
 vector<int> nodes[100]; // 每个元素代表一个节点链表
 int pedigree[100];  // 族谱树中每一层的叶子结点的数量
@@ -99,7 +99,7 @@ for (int i = 0; i < M; ++i) {
 
 ### 遍历族谱树
 
-```c++
+```cpp
 /**
  * 深度优先算法，遍历整个家族树，如果找到叶子结点就加入到全局变量数组中
  * @param index 下标
@@ -125,7 +125,7 @@ void dfs(int index, int depth) {
 
 ### 输出
 
-```c++
+```cpp
 // 数组默认值为0，这里输出这个数组的全部内容，长度为pedigree_length
 cout << pedigree[0];
 for (int i = 1; i <= pedigree_depth; ++i) {
@@ -135,7 +135,7 @@ for (int i = 1; i <= pedigree_depth; ++i) {
 
 ## 代码实现
 
-```c++
+```cpp
 #include <iostream>
 #include <vector>
 

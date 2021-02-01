@@ -45,7 +45,7 @@ T T W 39.31
 
 ## 代码与实现
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/25.
 //

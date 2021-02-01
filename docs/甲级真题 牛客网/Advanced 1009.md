@@ -108,7 +108,7 @@ vector<int> heap_sort(vector<int> arr, vector<int> p_result) {
 
 ## 代码与实现
 
-```c++
+```cpp
 #include <iostream>
 #include <vector>
 #include <algorithm>

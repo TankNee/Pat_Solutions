@@ -66,7 +66,7 @@ JH007BD ZD00001 07:20:09
 
 这里用的是排序，使用algorithm里的sort算法进行排序！不过这里每一个记录都有比较多的数据，所以我们建立了一个结构体：
 
-```c++
+```cpp
 struct record {
     string plate;
     int time;
@@ -76,7 +76,7 @@ struct record {
 
 今天看到别人写的代码才知道原来C++的结构体也可以直接写成员方法，十分方便，所以，利用这个特性，我们直接对这个结构体重构操作符`<`，供给sort函数进行排序。
 
-```c++
+```cpp
 struct record {
     string plate;
     int time;
@@ -98,7 +98,7 @@ struct record {
 
 同样的，两个记录是否构成pair的方法也可以直接在结构体定义里面写！
 
-```c++
+```cpp
 struct record {
     string plate;
     int time;
@@ -132,7 +132,7 @@ struct record {
 
 ## 代码与实现
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/27.
 //

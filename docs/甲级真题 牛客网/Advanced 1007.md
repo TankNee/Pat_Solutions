@@ -27,7 +27,7 @@ For each test case, print in the first line the maximum number of consecutive fa
 
 ## 代码与实现
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/27.
 //

@@ -37,7 +37,7 @@ For each test case you should output the product of *A* and *B* in one line, wit
 
 ## 代码与实现
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/24.
 //

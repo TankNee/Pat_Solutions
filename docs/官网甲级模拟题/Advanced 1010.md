@@ -50,7 +50,7 @@ Impossible
 
 还要确定进制的上限与下限，最小进制应该比这个数中最大的那位数字大1，最大进制应该不超过前一个已经确定好进制的数。考虑到数的范围，我们全部用long long int来实现。
 
-```c++
+```cpp
 char it = *max_element(N2.begin(), N2.end());
 long long low = (isdigit(it) ? it - '0' : it - 'a' + 10) + 1;
 long long high = max(num, low);
@@ -58,7 +58,7 @@ long long high = max(num, low);
 
 写这道题目的时候要想想如何优化，如果每一个进制都试一遍那肯定会超时，考虑到进制越大，数的值肯定会变大，而我们已经确定好数的进制的范围，相当于进制与数值是一个递增函数，所以我们就能用二分法来加快搜索速度！
 
-```c++
+```cpp
 while (low <= high) {
     long long mid = (low + high) / 2;
     long long t = to_decimal(N2, mid);
@@ -70,7 +70,7 @@ while (low <= high) {
 
 ## 代码与实现
 
-```c++
+```cpp
 #include <iostream>
 #include <algorithm>
 #include <cctype>

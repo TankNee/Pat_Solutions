@@ -56,7 +56,7 @@ For each test case, print in one line two numbers: the number of different short
 - 起始节点到其他各个节点的能召集的最大救援队数量
 - 起始节点到其他各个节点的访问数组，代表是否访问过这个节点
 
-```c++
+```cpp
 vector<vector<int>> edge(N, vector<int>(N, INT_MAX));
 // 到i顶点的距离
 vector<int> dis(N, INT_MAX);
@@ -79,7 +79,7 @@ vector<bool> visit(N, false);
 
 还是那上面这张图举个例子，C1-C3的距离为2，而C1-C2的距离为4，4 > 2是既定事实，不管怎么走只要经过C2再绕回C3就不可能出现路径更短的情况！
 
-```c++
+```cpp
 for (int j = 0; j < N; j++) {
     // 找出没访问过的顶点中距离最近的点
     if (!visit[j] && dis[j] < minn) {
@@ -91,7 +91,7 @@ for (int j = 0; j < N; j++) {
 
 然后我们再来寻找最短路径的最大数量以及救援队的数量。很显然，我们要先找到最短路径，方法就是用Dijkstra算法：遍历当前访问节点的所有邻接节点，如果路程比记录的路程更短，就覆盖原有数据：
 
-```c++
+```cpp
 if (dis[u] + edge[u][v] < dis[v]) {
     dis[v] = dis[u] + edge[u][v];
     // 因为找到了有更短路程的路径，就用新的路径的条数覆盖原有的路径条数
@@ -102,7 +102,7 @@ if (dis[u] + edge[u][v] < dis[v]) {
 
 这里的u为当前访问节点，v为u的邻接节点。因为找到了更短的路，所以原本的路径都失效了，现在有效的路径是从u出发到v的路径，而根据题目的描述，两个城市之间只有一条路，所以上面的赋值语句实际含义为：
 
-```c++
+```cpp
 roads[v] = roads[u] * 1;
 ```
 
@@ -110,7 +110,7 @@ roads[v] = roads[u] * 1;
 
 而当路程等于最短路程时，就相当于新发现了一条路，并且由于每个节点仅仅访问一次，所以不会有重复的问题，不需要考虑去重。
 
-```c++
+```cpp
 else if (dis[u] + edge[u][v] == dis[v]) {
     // 如果v这个点没有被访问过，并且从起始点到v点的距离=从起始点到u再到v的距离
     // 那就是说到相同的目的地，路程一样长，但是走过的路是不一样的，就把这些不同的路和原本的路径的数量相加。
@@ -123,7 +123,7 @@ else if (dis[u] + edge[u][v] == dis[v]) {
 
 因为到下个节点v经过的路径每一条都是完全不同的，所以可以直接相加，并且也是因为俩城市只有一条路，所以实际含义为:
 
-```c++
+```cpp
 roads[v] = roads[v] + roads[u] * 1;
 ```
 
@@ -131,7 +131,7 @@ roads[v] = roads[v] + roads[u] * 1;
 
 ## 代码[^1]
 
-```c++
+```cpp
 #include <iostream>
 #include <vector>
 #include <limits.h>

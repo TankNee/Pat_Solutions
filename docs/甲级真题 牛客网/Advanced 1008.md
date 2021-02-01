@@ -49,13 +49,13 @@ For each case, output the resulting linked list first, then the removed list.  E
 
 这里使用printf比较方便实现这种效果！
 
-```c++
+```cpp
 printf("%05d %d %05d\n", rm_nodes[i].address, rm_nodes[i].value, rm_nodes[i].next);
 ```
 
 ## 代码与实现
 
-```c++
+```cpp
 //
 // Created by tanknee on 2021/1/27.
 //

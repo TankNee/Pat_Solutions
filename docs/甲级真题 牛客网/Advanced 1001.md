@@ -60,7 +60,7 @@ Note that if such a path is not unique, output the one that requires minimum num
 
 该怎么计算从PBMC带出的自行车数量，在已知行进路线的情况下：
 
-```c++
+```cpp
 int get_sent(vector<int> links) {
     int sum = 0, min = INT_MAX;
     for (int i = 1; i < links.size(); ++i) {
@@ -80,7 +80,7 @@ int get_sent(vector<int> links) {
 
 同理，当我们知道了带出门的自行车数量的时候，就能很方便的知道带回去的数量。
 
-```c++
+```cpp
 int get_back(vector<int> links, int init) {
     int sum = 0;
     for (int i = 1; i < links.size(); ++i) {
@@ -94,7 +94,7 @@ int get_back(vector<int> links, int init) {
 
 ## 代码与实现
 
-```c++
+```cpp
 #include <iostream>
 #include <vector>
 #include <climits>
