@@ -10,6 +10,8 @@
     - [Advanced 1011](/官网甲级模拟题/Advanced%201011.md)
     - [Advanced 1012](/官网甲级模拟题/Advanced%201012.md)
     - [Advanced 1013](/官网甲级模拟题/Advanced%201013.md)
+    - [Advanced 1014](/官网甲级模拟题/Advanced%201014.md)
+    - [Advanced 1015](/官网甲级模拟题/Advanced%201015.md)
   - 小结
     - [01刷题小结](/小结/2021-01刷题小结.md)
     - [归并排序算法](/小结/归并排序算法.md)
