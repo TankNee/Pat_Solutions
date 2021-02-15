@@ -14,7 +14,7 @@ The Public Bike Management Center (PBMC) keeps monitoring the real-time capacity
 Figure 1
 
 
-Figure 1 illustrates an example.  The stations are represented by vertices and the roads correspond to the edges.  The number on an edge is the time taken to reach one end station from another.  The number written inside a vertex S is the current number of bikes stored at S.  Given that the maximum capacity of each station is 10.  To solve the problem at S3, we have 2 different shortest paths:
+Figure 1 illustrates an example.  The stations are represented by vertices and the roads correspond to the edge.  The number on an edge is the time taken to reach one end station from another.  The number written inside a vertex S is the current number of bikes stored at S.  Given that the maximum capacity of each station is 10.  To solve the problem at S3, we have 2 different shortest paths:
 1. PBMC -> S1 -> S3.  In this case, 4 bikes must be sent from PBMC, because we can collect 1 bike from S1 and then take 5 bikes to S3, so that both stations will be in perfect conditions.
 2. PBMC -> S2 -> S3.  This path requires the same time as path 1, but only 3 bikes sent from PBMC and hence is the one that will be chosen.
 
