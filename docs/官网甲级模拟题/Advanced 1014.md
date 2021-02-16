@@ -1,6 +1,6 @@
 # 题目
 
-1014 Waiting in Line (30 分)
+## 1014 Waiting in Line (30 分)
 
 Suppose a bank has *N* windows open for service. There is a yellow line in front of the windows which devides the waiting area into two parts. The rules for the customers to wait in line are:
 

@@ -1,6 +1,6 @@
 # 题目
 
-1015 Reversible Primes (20 分)
+## 1015 Reversible Primes (20 分)
 
 A **reversible prime** in any number system is a prime whose "reverse" in that number system is also a prime. For example in the decimal system 73 is a reversible prime because its reverse 37 is also a prime.
 

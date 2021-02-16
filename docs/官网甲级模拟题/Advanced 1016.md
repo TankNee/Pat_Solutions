@@ -1,6 +1,6 @@
 # 题目
 
-1016 Phone Bills (25 分)
+## 1016 Phone Bills (25 分)
 
 A long-distance telephone company charges its customers by the following rules:
 
