@@ -16,7 +16,7 @@
     window.$docsify = {
         name: 'Pat Solutions',
         repo: 'TankNee/Pat_Solutions',
-        basePath: 'https://www.tanknee.cn/Pat_Solutions',
+        // basePath: 'https://www.tanknee.cn/Pat_Solutions',
         loadSidebar: true,
         auto2top: true,
         autoHeader: true,
@@ -44,7 +44,9 @@
         owner: 'TankNee',
         admin: ['TankNee'],
         // facebook-like distraction free mode
-        distractionFreeMode: true
+        distractionFreeMode: true,
+        id: location.pathname,
+        proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token'
     })
 </script>
 </body>
