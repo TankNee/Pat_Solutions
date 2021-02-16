@@ -7,6 +7,8 @@
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+
 </head>
 <body>
 <div id="app"></div>
@@ -18,7 +20,8 @@
         loadSidebar: true,
         auto2top: true,
         autoHeader: true,
-        subMaxLevel: 1,
+        subMaxLevel: 2,
+        loadFooter: '_footer.md',
     }
     if (typeof navigator.serviceWorker !== 'undefined') {
         navigator.serviceWorker.register('sw.js')
@@ -28,6 +31,21 @@
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
 <script src="//cdn.jsdelivr.net/gh/TankNee/prism@2.0.0/components/prism-c++.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'cbd31294f8ad2c536097',
+        clientSecret: '9748dd7d34a1a5775b5997417829519e1730ab3b',
+        repo: 'Pat_Solutions',
+        owner: 'TankNee',
+        admin: ['TankNee'],
+        // facebook-like distraction free mode
+        distractionFreeMode: true
+    })
+</script>
 </body>
 </html>
