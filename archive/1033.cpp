@@ -1,4 +1,7 @@
-#include <iostream>
+//
+// Created by tanknee on 3/1/2021.
+//
+
 #include <cstdio>
 #include <algorithm>
 
@@ -82,4 +85,6 @@ int main() {
     printf("%.2lf\n", cost);
     return 0;
 }
+
+
 
