@@ -1,31 +1,60 @@
-//
-// Created by tanknee on 3/4/2021.
-//
-
-// 最大连续子序列和
-
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
+
+struct node {
+    string val;
+    int left, right;
+
+    node() {
+        left = right = -1;
+    }
+};
+
+vector<node> nodes;
+string res;
+
+void in_order(int root) {
+    if (nodes[root].left != -1 && nodes[root].right != -1)
+        res.append("(");
+    if (nodes[root].left != -1) in_order(nodes[root].left);
+    if (nodes[root].val == "-" && nodes[root].left == -1) {
+        res.append("(");
+    }
+    res.append(nodes[root].val);
+    if (nodes[root].right != -1) in_order(nodes[root].right);
+    if (nodes[root].val == "-" && nodes[root].left == -1) {
+        res.append(")");
+    }
+    if (nodes[root].left != -1 && nodes[root].right != -1)
+        res.append(")");
+}
 
 int main() {
     int N;
     cin >> N;
-    int sequence[N], dp[N];
-    for (int i = 0; i < N; ++i) {
-        cin >> sequence[i];
+    nodes.resize(N + 1, node{});
+    for (int i = 1; i <= N; ++i) {
+        cin >> nodes[i].val >> nodes[i].left >> nodes[i].right;
     }
-    // 设置边界条件
-    dp[0] = sequence[0];
-    for (int i = 1; i < N; ++i) {
-        dp[i] = max(sequence[i], dp[i - 1] + sequence[i]);
-    }
-    int max_num = dp[0];
-    for (int i = 1; i < N; ++i) {
-        if (dp[i] > max_num) {
-            max_num = dp[i];
+    int root = 1;
+    for (int i = 1; i <= N; ++i) {
+        bool flag = false;
+        for (int j = 1; j <= N; ++j) {
+            if (nodes[j].left == i || nodes[j].right == i) {
+                flag = true;
+                break;
+            }
+        }
+        if (!flag) {
+            root = i;
+            break;
         }
     }
-    printf("%d", max_num);
+    in_order(root);
+    res.erase(res.begin());
+    res.erase(res.end() - 1);
+    cout << res;
+
     return 0;
 }
