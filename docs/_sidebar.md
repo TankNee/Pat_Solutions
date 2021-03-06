@@ -1,3 +1,4 @@
+
   - 官网甲级模拟题
     - [Advanced 1003](/官网甲级模拟题/Advanced%201003.md)
     - [Advanced 1004](/官网甲级模拟题/Advanced%201004.md)
@@ -25,6 +26,15 @@
     - [Advanced 1027](/官网甲级模拟题/Advanced%201027.md)
     - [Advanced 1028](/官网甲级模拟题/Advanced%201028.md)
     - [Advanced 1029](/官网甲级模拟题/Advanced%201029.md)
+    - [Advanced 1030](/官网甲级模拟题/Advanced%201030.md)
+    - [Advanced 1031](/官网甲级模拟题/Advanced%201031.md)
+    - [Advanced 1032](/官网甲级模拟题/Advanced%201032.md)
+    - [Advanced 1033](/官网甲级模拟题/Advanced%201033.md)
+    - [Advanced 1035](/官网甲级模拟题/Advanced%201035.md)
+    - [Advanced 1036](/官网甲级模拟题/Advanced%201036.md)
+    - [Advanced 1037](/官网甲级模拟题/Advanced%201037.md)
+    - [Advanced 1038](/官网甲级模拟题/Advanced%201038.md)
+    - [Advanced 1049](/官网甲级模拟题/Advanced%201049.md)
   - 小结
     - [01刷题小结](/小结/2021-01刷题小结.md)
     - [归并排序算法](/小结/归并排序算法.md)
