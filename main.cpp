@@ -1,34 +1,98 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+int exists[50];
+
+struct equation {
+    int product;
+    vector<int> reactants;
+};
+
+void print_equation(equation e) {
+    for (int i = 0; i < e.reactants.size(); ++i) {
+        printf("%02d", e.reactants[i]);
+        if (i != e.reactants.size() - 1) printf(" + ");
+    }
+    printf(" -> %02d\n", e.product);
+}
+
+bool test(const equation &e) {
+    bool flag = true;
+    for (int reactant : e.reactants) {
+        if (!exists[reactant]) {
+            flag = false;
+            break;
+        }
+    }
+    if (flag) {
+        for (int reactant : e.reactants) {
+            exists[reactant] = 0;
+        }
+    }
+    return flag;
+}
 
 int main() {
-    int N, M, L, tmp;
-    cin >> N >> M;
-    vector<int> f_colors(201), dp;
-    for (int i = 1; i <= M; ++i) {
-        cin >> tmp;
-        f_colors[tmp] = i;
+    int N, M, K;
+    cin >> N;
+    vector<int> reactants(N), products;
+    vector<equation> equations;
+    map<int, vector<equation>> m;
+    for (int i = 0; i < N; ++i) {
+        cin >> reactants[i];
+        exists[reactants[i]] = 1;
     }
-    cin >> L;
-    vector<int> colors;
-    for (int i = 0; i < L; ++i) {
-        cin >> tmp;
-        if (f_colors[tmp]) {
-            colors.push_back(tmp);
+    cin >> M;
+    products.resize(M);
+    for (int i = 0; i < M; ++i) {
+        cin >> products[i];
+        for (int j = 0; j < N; ++j) {
+            if (reactants[j] == products[i]) {
+                equation e{products[i], {products[i]}};
+                m[products[i]].push_back(e);
+            }
         }
     }
-    dp.resize(colors.size());
-    int max_length = -1;
-    // 与递归相反，自顶向下更加方便编写代码！
-    for (int i = 0; i < colors.size(); ++i) {
-        dp[i] = 1;
-        for (int j = 0; j < i; ++j) {
-            if (f_colors[colors[i]] >= f_colors[colors[j]])
-                dp[i] = max(dp[i], dp[j] + 1);
+    cin >> K;
+    for (int i = 0; i < K; ++i) {
+        equation e;
+        char tmp = getchar();
+        string num;
+        while (tmp != '-') {
+            if (tmp == ' ' && !num.empty()) {
+                e.reactants.push_back(stoi(num));
+                num.clear();
+            } else if (tmp >= '0' && tmp <= '9') {
+                num.push_back(tmp);
+            }
+            tmp = getchar();
         }
-        max_length = max(max_length, dp[i]);
+        num.clear();
+        while (tmp != '\n') {
+            if (tmp >= '0' && tmp <= '9') {
+                num.push_back(tmp);
+            }
+            tmp = getchar();
+        }
+        e.product = stoi(num);
+        equations.push_back(e);
+        m[e.product].push_back(e);
     }
-    printf("%d", max_length);
+    for (int i = 0; i < M; ++i) {
+        sort(m[products[i]].begin(), m[products[i]].end(), [](const equation &e1, const equation &e2) {
+            for (int j = 0; j < min(e1.reactants.size(), e2.reactants.size()); ++j) {
+                if (e1.reactants[j] != e2.reactants[j]) return e1.reactants[j] < e2.reactants[j];
+            }
+            return e1.reactants.size() < e2.reactants.size();
+        });
+    }
+    for (int i = 0; i < M; ++i) {
+        for (int j = 0; j < m[products[i]].size(); ++j) {
+            if (test(m[products[i]][j])) {
+                print_equation(m[products[i]][j]);
+                break;
+            }
+        }
+    }
     return 0;
 }
